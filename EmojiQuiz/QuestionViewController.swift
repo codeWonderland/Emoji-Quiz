@@ -12,10 +12,13 @@ class QuestionViewController: UIViewController {
 
     
     @IBOutlet weak var emojis: UILabel!
+    @IBOutlet weak var phrase: UILabel!
     
+    // these are just placeholders for now
     let topicOneEmojis: [String] = ["🤩", "😍", "🤨", "🤯", "😱", "🤓", "🤬", "🤒", "😴", "😤"]
     let topicTwoEmojis: [String] = ["⚡️", "🌟", "🌈", "🌦", "❄️", "☂️", "☀️", "🔥", "🌪", "💨"]
-    var theseEmojis: ArraySlice<String> = []
+    var theseEmojis: [String] = []
+    var numQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +27,25 @@ class QuestionViewController: UIViewController {
         
         // set current emoji quizzes
         let topic = UserDefaults.standard.string(forKey: "topic")
-        let numQuestions = UserDefaults.standard.integer(forKey: "numQuestions")
+        numQuestions = UserDefaults.standard.integer(forKey: "numQuestions")
         if topic == "Disney" {
-            theseEmojis = topicOneEmojis[...numQuestions]
+            theseEmojis = topicOneEmojis
         } else {
-            theseEmojis = topicTwoEmojis[...numQuestions]
+            theseEmojis = topicTwoEmojis
         }
         theseEmojis.shuffle()
     }
+    
+    
+    func newPrompt() {
+        
+        // set the phrase as a prompt of underscores ___ for each letter
+        let thisPrompt = theseEmojis[numQuestions]
+        
+        // numQuestions should be incremented when a prompt is completed.
+        
+    }
+    
     
     /*
     // MARK: - Navigation
@@ -42,6 +56,8 @@ class QuestionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
     
     
 

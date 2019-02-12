@@ -250,6 +250,7 @@
                     </view>
                     <connections>
                         <outlet property="emojis" destination="ttx-9d-kra" id="tBE-bh-BVC"/>
+                        <outlet property="phrase" destination="EDM-hl-xRR" id="pu7-Jg-vWk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAZ-Lu-NMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
