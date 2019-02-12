@@ -17,8 +17,25 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        questionStepper.maximumValue = 5.0
+        questionStepper.minimumValue = 1.0
     }
 
-
+    @IBAction func setNumQuestions(_ sender: UIStepper) {
+        let numQuestions = Int(questionStepper.value)
+        
+        questionCount.text = "\(numQuestions)"
+        
+        UserDefaults.standard.set(numQuestions, forKey: "numQuestions")
+    }
+    
+    @IBAction func clickTopic(_ sender: UIButton) {
+        UserDefaults.standard.set(sender.title(for: .normal)!, forKey: "topic")
+        
+        print("Topic: \(sender.title(for: .normal)!)")
+    }
+    
+    
 }
 
