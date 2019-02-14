@@ -14,6 +14,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var emojis: UILabel!
     @IBOutlet weak var phrase: UILabel!
     @IBOutlet weak var guessedLetters: UILabel!
+    @IBOutlet weak var lives: UILabel!
     
     @IBOutlet weak var aButton: UIButton!
     @IBOutlet weak var bButton: UIButton!
@@ -52,7 +53,8 @@ class QuestionViewController: UIViewController {
     var correctLettersArray: [String] = []
     var numQuestions = 0
     var thisPrompt: String = "noodle"
-    var numWrong = 0
+    var numLives = 3 // counts down
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,10 +127,12 @@ class QuestionViewController: UIViewController {
             } else {
                 // failure
                 // play a funny sound
-                numWrong = numWrong + 1
+                numLives = numLives - 1
+                lives.text = String(repeating: "❤️", count: numLives)
                 
-                if numWrong >= 3 {
-                    // you out fam
+                if numLives <= 0 {
+                    // you out fam :/
+                    UserDefaults.standard.set(score, forKey: "score")
                 }
             }
             
@@ -143,6 +147,9 @@ class QuestionViewController: UIViewController {
     }
     
     func endPrompt() {
+        
+        phrase.text = correctLettersArray.joined(separator: String(" "))
+        score = score + 1
         
         // numQuestions should be decremented when a prompt is completed.
         numQuestions -= 1
