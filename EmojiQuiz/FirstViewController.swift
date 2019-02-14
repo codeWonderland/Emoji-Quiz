@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        questionStepper.maximumValue = 5.0
+        questionStepper.maximumValue = 10.0
         questionStepper.minimumValue = 1.0
     }
 
