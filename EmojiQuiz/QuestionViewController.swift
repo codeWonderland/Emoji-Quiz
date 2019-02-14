@@ -44,10 +44,10 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var zButton: UIButton!
 
     var keyboard: [UIButton] = []
-    
+
     // these are just placeholders for now
-    let topicOneEmojis: [[String]] = [["👹🚪🏢", "monsters inc"], ["🏎️🚜", "cars"], ["🎈🏠🎈", "up"], ["🕷🧑", "spiderman"], ["👸🏿🐸", "princess and the frog"], ["🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶", "a hundred and one dalmations"], ["⬆️🏫🎶", "high school musical"], ["🌲🌳📖", "jungle book"], ["👩🐻🌹", "beauty and the beast"], ["🦊🏹", "robin hood"]]
-    let topicTwoEmojis: [[String]] = [["👹✍️👩", "frankenstein"], ["📖 😩🧒", "diary of a wimpy kid"], ["🤴👸💀🎭", "romeo and juliet"], ["🧙‍♂🙆‍♂️🎩", "harry potter"], ["🐦💀", "to kill a mockingbird"], ["🖥️🎭", "macbeth"], ["🐖🎭", "hamlet"], ["🔥", "fire"], ["🌪", "tornado"], ["💨", "wind"]]
+    var topicOneEmojis: [[String]] = []
+    var topicTwoEmojis: [[String]] = []
     var theseEmojis: [[String]] = []
     var guessedLetterArray: [String] = []
     var correctLettersArray: [String] = []
@@ -58,6 +58,12 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let data_path = Bundle.main.path(forResource: "quiz_data", ofType: "plist")!
+        let dict = NSDictionary(contentsOfFile: data_path)
+        
+        topicOneEmojis = dict!.object(forKey: "movies") as! [[String]]
+        topicTwoEmojis = dict!.object(forKey: "books") as! [[String]]
 
         // Do any additional setup after loading the view.
         

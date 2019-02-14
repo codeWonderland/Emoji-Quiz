@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>movies</key>
+        <array>
+            <array>
+                <string>👹🚪🏢</string>
+                <string>monsters inc</string>
+            </array>
+            <array>
+                <string>🏎️🚜</string>
+                <string>cars</string>
+            </array>
+            <array>
+                <string>🎈🏠🎈</string>
+                <string>up</string>
+            </array>
+            <array>
+                <string>🕷🧑</string>
+                <string>spiderman</string>
+            </array>
+            <array>
+                <string>👸🏿🐸</string>
+                <string>princess and the frog</string>
+            </array>
+            <array>
+                <string>🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶</string>
+                <string>a hundred and one dalmations</string>
+            </array>
+            <array>
+                <string>⬆️🏫🎶</string>
+                <string>high school musical</string>
+            </array>
+            <array>
+                <string>🌲🌳📖</string>
+                <string>jungle book</string>
+            </array>
+            <array>
+                <string>👩🐻🌹</string>
+                <string>beauty and the beast</string>
+            </array>
+            <array>
+                <string>🦊🏹</string>
+                <string>robin hood</string>
+            </array>
+        </array>
+        <key>books</key>
+        <array>
+            <array></array>
+        </array>
+    </dict>
+</plist>

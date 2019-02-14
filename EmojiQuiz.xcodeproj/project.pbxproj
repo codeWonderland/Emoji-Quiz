@@ -15,6 +15,7 @@
 		997F9E3D220A13E000B0C318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997F9E3C220A13E000B0C318 /* Assets.xcassets */; };
 		997F9E40220A13E000B0C318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997F9E3E220A13E000B0C318 /* LaunchScreen.storyboard */; };
 		99DA06F6220A701100A8B6BE /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA06F5220A701100A8B6BE /* QuestionViewController.swift */; };
+		A7E4A7232215FEF0007EA508 /* quiz_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7E4A7222215FEF0007EA508 /* quiz_data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		997F9E3F220A13E000B0C318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		997F9E41220A13E000B0C318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99DA06F5220A701100A8B6BE /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		A7E4A7222215FEF0007EA508 /* quiz_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quiz_data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				997F9E37220A13DF00B0C318 /* ScoreViewController.swift */,
 				997F9E39220A13DF00B0C318 /* Main.storyboard */,
 				997F9E3C220A13E000B0C318 /* Assets.xcassets */,
+				A7E4A7222215FEF0007EA508 /* quiz_data.plist */,
 				997F9E3E220A13E000B0C318 /* LaunchScreen.storyboard */,
 				997F9E41220A13E000B0C318 /* Info.plist */,
 				99DA06F5220A701100A8B6BE /* QuestionViewController.swift */,
@@ -134,6 +137,7 @@
 				997F9E40220A13E000B0C318 /* LaunchScreen.storyboard in Resources */,
 				997F9E3D220A13E000B0C318 /* Assets.xcassets in Resources */,
 				997F9E3B220A13DF00B0C318 /* Main.storyboard in Resources */,
+				A7E4A7232215FEF0007EA508 /* quiz_data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
