@@ -358,8 +358,34 @@
                         <viewLayoutGuide key="safeArea" id="Tfd-Vb-w5n"/>
                     </view>
                     <connections>
+                        <outlet property="aButton" destination="hQw-Er-gRP" id="p92-jp-mSk"/>
+                        <outlet property="bButton" destination="aF6-27-9fH" id="fyH-0x-fBj"/>
+                        <outlet property="cButton" destination="ObS-vN-JS6" id="flk-9v-aoF"/>
+                        <outlet property="dButton" destination="MF7-iT-j2J" id="BEg-Rk-RiU"/>
+                        <outlet property="eButton" destination="qNH-DY-4a9" id="fs6-mq-r8u"/>
                         <outlet property="emojis" destination="ttx-9d-kra" id="tBE-bh-BVC"/>
+                        <outlet property="fButton" destination="YhM-99-Xic" id="Q59-0n-JX7"/>
+                        <outlet property="gButton" destination="UbN-kx-Nag" id="Yfj-lC-PY0"/>
+                        <outlet property="hButton" destination="6Ku-gK-shc" id="Gf1-rL-K0F"/>
+                        <outlet property="iButton" destination="Lov-8G-Vvr" id="gDz-Zc-of1"/>
+                        <outlet property="jButton" destination="9vJ-gC-pgU" id="OLx-rz-GKd"/>
+                        <outlet property="kButton" destination="CAX-Bz-hyL" id="zrr-Md-oNc"/>
+                        <outlet property="lButton" destination="lwc-Qh-P4v" id="eUe-gh-6Ho"/>
+                        <outlet property="mButton" destination="sAx-7M-2J1" id="Oc7-Ab-rad"/>
+                        <outlet property="nButton" destination="5QR-oH-WRO" id="G3e-KZ-KLO"/>
+                        <outlet property="oButton" destination="jjO-Lp-kx7" id="zSj-Le-ri5"/>
+                        <outlet property="pButton" destination="reO-Ls-LQC" id="fET-cJ-Xmx"/>
                         <outlet property="phrase" destination="EDM-hl-xRR" id="pu7-Jg-vWk"/>
+                        <outlet property="qButton" destination="22K-Nv-VYn" id="b5T-UN-sBO"/>
+                        <outlet property="rButton" destination="LVl-hG-OSR" id="0EB-dB-0H3"/>
+                        <outlet property="sButton" destination="wXF-y2-FbR" id="cnV-YY-h08"/>
+                        <outlet property="tButton" destination="yJN-9C-civ" id="Y7H-dw-67H"/>
+                        <outlet property="uButton" destination="RPz-ix-yRY" id="Aer-Eb-C7Q"/>
+                        <outlet property="vButton" destination="FvY-4s-TM1" id="qG7-6y-LH1"/>
+                        <outlet property="wButton" destination="0fl-wo-vhE" id="xsM-xU-xYT"/>
+                        <outlet property="xButton" destination="YPI-eJ-JVU" id="e3t-7C-4xh"/>
+                        <outlet property="yButton" destination="7LQ-Y6-BXc" id="pfj-pW-IFr"/>
+                        <outlet property="zButton" destination="dv4-3d-2Gt" id="BfN-x5-3jP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAZ-Lu-NMR" userLabel="First Responder" sceneMemberID="firstResponder"/>

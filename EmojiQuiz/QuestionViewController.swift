@@ -15,7 +15,34 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var phrase: UILabel!
     @IBOutlet weak var guessedLetters: UILabel!
     
-    
+    @IBOutlet weak var aButton: UIButton!
+    @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var cButton: UIButton!
+    @IBOutlet weak var dButton: UIButton!
+    @IBOutlet weak var eButton: UIButton!
+    @IBOutlet weak var fButton: UIButton!
+    @IBOutlet weak var gButton: UIButton!
+    @IBOutlet weak var hButton: UIButton!
+    @IBOutlet weak var iButton: UIButton!
+    @IBOutlet weak var jButton: UIButton!
+    @IBOutlet weak var kButton: UIButton!
+    @IBOutlet weak var lButton: UIButton!
+    @IBOutlet weak var mButton: UIButton!
+    @IBOutlet weak var nButton: UIButton!
+    @IBOutlet weak var oButton: UIButton!
+    @IBOutlet weak var pButton: UIButton!
+    @IBOutlet weak var qButton: UIButton!
+    @IBOutlet weak var rButton: UIButton!
+    @IBOutlet weak var sButton: UIButton!
+    @IBOutlet weak var tButton: UIButton!
+    @IBOutlet weak var uButton: UIButton!
+    @IBOutlet weak var vButton: UIButton!
+    @IBOutlet weak var wButton: UIButton!
+    @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var yButton: UIButton!
+    @IBOutlet weak var zButton: UIButton!
+
+    var keyboard: [UIButton] = []
     
     // these are just placeholders for now
     let topicOneEmojis: [[String]] = [["👹🚪🏢", "monsters inc"], ["🏎️🚜", "cars"], ["🎈🏠🎈", "up"], ["🕷🧑", "spiderman"], ["👸🏿🐸", "princess and the frog"], ["🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶", "a hundred and one dalmations"], ["⬆️🏫🎶", "high school musical"], ["🌲🌳📖", "jungle book"], ["👩🐻🌹", "beauty and the beast"], ["🦊🏹", "robin hood"]]
@@ -41,6 +68,9 @@ class QuestionViewController: UIViewController {
             theseEmojis = topicTwoEmojis
         }
         theseEmojis.shuffle()
+        
+        // set keyboard
+        keyboard = [self.aButton, self.bButton, self.cButton, self.dButton, self.eButton, self.fButton, self.gButton, self.hButton, self.iButton, self.jButton, self.kButton, self.lButton, self.mButton, self.nButton, self.oButton, self.pButton, self.qButton, self.rButton, self.sButton, self.tButton, self.uButton, self.vButton, self.wButton, self.xButton, self.yButton, self.zButton]
         
         newPrompt()
     }
@@ -75,6 +105,7 @@ class QuestionViewController: UIViewController {
                         
                         if correctLettersArray.contains("_") == false {
                             // word is guessed!
+                            print("you got it!")
                             endPrompt()
                         }
                         
@@ -103,8 +134,9 @@ class QuestionViewController: UIViewController {
     
     func endPrompt() {
         
+        // numQuestions should be decremented when a prompt is completed.
         numQuestions -= 1
-        if numQuestions < 0 {
+        if numQuestions <= 0 {
             // game over! you won!
             
         } else {
@@ -135,7 +167,9 @@ class QuestionViewController: UIViewController {
         phrase.text = correctLettersArray.joined(separator: String(" "))
         emojis.text = theseEmojis[numQuestions][0]
         
-        // numQuestions should be incremented when a prompt is completed.
+        for i in 0..<keyboard.count {
+            keyboard[i].isEnabled = true
+        }
         
     }
     
