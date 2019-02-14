@@ -72,6 +72,7 @@ class QuestionViewController: UIViewController {
         // set keyboard
         keyboard = [self.aButton, self.bButton, self.cButton, self.dButton, self.eButton, self.fButton, self.gButton, self.hButton, self.iButton, self.jButton, self.kButton, self.lButton, self.mButton, self.nButton, self.oButton, self.pButton, self.qButton, self.rButton, self.sButton, self.tButton, self.uButton, self.vButton, self.wButton, self.xButton, self.yButton, self.zButton]
         
+        print("here!")
         newPrompt()
     }
     
@@ -85,6 +86,7 @@ class QuestionViewController: UIViewController {
         */
         
         let character = sender.title(for: .normal)!
+        var word_guessed = false
         
         if !(guessedLetterArray.contains(character)) {
             guessedLetterArray.append(character)
@@ -97,19 +99,25 @@ class QuestionViewController: UIViewController {
                         thisPrompt.startIndex,
                         offsetBy: i)]
                     
-                    // check each char in string to match
+                    // check each char in string to see if guess is correct
                     if promptChar == currentChar {
                         
                         // update the correct letter array
                         correctLettersArray[i] = String(currentChar)
                         
-                        if correctLettersArray.contains("_") == false {
+                        // check if entire word is guessed
+                        word_guessed = correctLettersArray.contains("_") == false
+                        
+                        if word_guessed  {
                             // word is guessed!
                             print("you got it!")
                             endPrompt()
+                            break;
+                        } else {
+                            phrase.text = correctLettersArray.joined(separator: String(" "))
+                            
                         }
                         
-                        phrase.text = correctLettersArray.joined(separator: String(" "))
                     }
                 }
                 
@@ -124,7 +132,9 @@ class QuestionViewController: UIViewController {
                 }
             }
             
-            sender.isEnabled = false
+            if !word_guessed {
+                sender.isEnabled = false
+            }
         }
     }
     
@@ -148,7 +158,7 @@ class QuestionViewController: UIViewController {
     func newPrompt() {
         
         // set the phrase as a prompt of underscores ___ for each letter
-        thisPrompt = theseEmojis[numQuestions][1]
+        thisPrompt = theseEmojis[numQuestions - 1][1]
         correctLettersArray = Array(repeating: "_", count: thisPrompt.count)
         
         for i in 0..<thisPrompt.count {
@@ -165,11 +175,14 @@ class QuestionViewController: UIViewController {
         }
         
         phrase.text = correctLettersArray.joined(separator: String(" "))
-        emojis.text = theseEmojis[numQuestions][0]
+        emojis.text = theseEmojis[numQuestions - 1][0]
         
         for i in 0..<keyboard.count {
             keyboard[i].isEnabled = true
         }
+        
+        // clear out guessedLetterArray
+        guessedLetterArray = []
         
     }
     
