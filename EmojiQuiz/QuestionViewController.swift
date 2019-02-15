@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuestionViewController: UIViewController {
 
@@ -128,17 +129,19 @@ class QuestionViewController: UIViewController {
                         
                     }
                 }
-                
-                updatePhrase()
             } else {
                 // failure
                 // play a funny sound
+                playSound(file: "lose", fileType: "mp3")
+
+                // update lives
                 numLives = numLives - 1
                 lives.text = String(repeating: "❤️", count: numLives)
                 
                 if numLives <= 0 {
                     // you out fam :/
                     UserDefaults.standard.set(score, forKey: "score")
+                    recordScore()
                 }
             }
             
@@ -148,11 +151,37 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    func updatePhrase() {
+    func recordScore() {
+        var uname = UserDefaults.standard.string(forKey: "uname") ?? ""
+        
+        // GET USERNAME
+        if uname == "" {
+            let alert = UIAlertController(title: "Record Username", message: "What should we put in the hall of fame?", preferredStyle: .alert)
+            
+            alert.addTextField(configurationHandler: { (textField: UITextField) in
+                textField.text = "Enter Username"
+            })
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                if let textField = alert?.textFields![0] {
+                    if textField.text == "" {
+                        UserDefaults.standard.set(textField.text!, forKey: "uname")
+                        uname = textField.text!
+                    } else {
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
+                } else {
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            }))
+        }
+        
+        // TODO: RECORD SCORE
         
     }
     
     func endPrompt() {
+        playSound(file: "win", fileType: "mp3")
         
         phrase.text = correctLettersArray.joined(separator: String(" "))
         score = score + 1
@@ -160,7 +189,8 @@ class QuestionViewController: UIViewController {
         // numQuestions should be decremented when a prompt is completed.
         numQuestions -= 1
         if numQuestions <= 0 {
-            // game over! you won!
+            // TODO: game over! you won!
+            recordScore()
             
         } else {
             newPrompt()
@@ -188,7 +218,11 @@ class QuestionViewController: UIViewController {
         }
         
         phrase.text = correctLettersArray.joined(separator: String(" "))
+        
+        // Fade emojis
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in self.emojis.alpha = 0 })
         emojis.text = theseEmojis[numQuestions - 1][0]
+        UIView.animate(withDuration: 1.5, animations: { () -> Void in self.emojis.alpha = 1 })
         
         for i in 0..<keyboard.count {
             keyboard[i].isEnabled = true
@@ -199,6 +233,22 @@ class QuestionViewController: UIViewController {
         
     }
     
+    // Taken from http://tinyurl.com/y8zpj66f
+    func playSound(file:String,
+                   fileType:String) {
+        var player: AVAudioPlayer?
+        
+        let path = Bundle.main.path(forResource: file, ofType: fileType)
+        let url = URL(fileURLWithPath: path ?? "")
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+            usleep(700000)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
     /*
     // MARK: - Navigation
