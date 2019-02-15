@@ -32,8 +32,6 @@ class QuizViewController: UIViewController {
     
     @IBAction func clickTopic(_ sender: UIButton) {
         UserDefaults.standard.set(sender.title(for: .normal)!, forKey: "topic")
-        
-        print("Topic: \(sender.title(for: .normal)!)")
     }
     
     

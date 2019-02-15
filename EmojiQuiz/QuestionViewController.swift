@@ -56,32 +56,28 @@ class QuestionViewController: UIViewController {
     var thisPrompt: String = "noodle"
     var numLives = 3 // counts down
     var score = 0
+    var topic: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Grab Data path
         let data_path = Bundle.main.path(forResource: "quiz_data", ofType: "plist")!
         let dict = NSDictionary(contentsOfFile: data_path)
         
-        topicOneEmojis = dict!.object(forKey: "movies") as! [[String]]
-        topicTwoEmojis = dict!.object(forKey: "books") as! [[String]]
-
-        // Do any additional setup after loading the view.
-        
-        // set current emoji quizzes
-        let topic = UserDefaults.standard.string(forKey: "topic")
+        // get userdefaults data
+        topic = UserDefaults.standard.string(forKey: "topic")
         numQuestions = UserDefaults.standard.integer(forKey: "numQuestions")
-        if topic == "Disney" {
-            theseEmojis = topicOneEmojis
-        } else {
-            theseEmojis = topicTwoEmojis
-        }
+        
+        // get topic data from plist
+        theseEmojis = dict!.object(forKey: topic!) as! [[String]]
+        
+        // shuffle questions
         theseEmojis.shuffle()
         
         // set keyboard
         keyboard = [self.aButton, self.bButton, self.cButton, self.dButton, self.eButton, self.fButton, self.gButton, self.hButton, self.iButton, self.jButton, self.kButton, self.lButton, self.mButton, self.nButton, self.oButton, self.pButton, self.qButton, self.rButton, self.sButton, self.tButton, self.uButton, self.vButton, self.wButton, self.xButton, self.yButton, self.zButton]
         
-        print("here!")
         newPrompt()
     }
     
@@ -119,7 +115,6 @@ class QuestionViewController: UIViewController {
                         
                         if word_guessed  {
                             // word is guessed!
-                            print("you got it!")
                             endPrompt()
                             break;
                         } else {
@@ -178,7 +173,44 @@ class QuestionViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         
-        // TODO: RECORD SCORE
+        var scores = UserDefaults.standard.array(forKey: "\(topic!)_scores")
+        
+        if scores == nil {
+            scores = [["Alice", 5], ["Alex", 4], ["Alex", 3], ["Alex", 2], ["Alex", 1]]
+        } else {
+            scores = scores!.map {
+                return ($0 as! String).split(separator: "-")
+            }
+        }
+        
+        scores!.append([uname, score])
+        
+        scores!.sort(by: { (left, right) -> Bool in
+            let l = left as! [Any]
+            let r = right as! [Any]
+            
+            let l1 = l[1] as! Int
+            let r1 = r[1] as! Int
+            
+            if l1 > r1 {
+                return true
+            } else {
+                return false
+            }
+        })
+        
+        scores!.popLast()
+        
+        scores = scores!.map({ (tmp) -> String in
+            if let arr = tmp as? [Any] {
+                return "\(arr[0])-\(arr[1])"
+            } else {
+                return "Alex-1"
+            }
+        })
+    
+        // record scores
+        UserDefaults.standard.set(scores, forKey: "\(topic!)_scores")
         
         // return to homescreen
         dismiss(animated: true, completion: nil)
@@ -189,6 +221,8 @@ class QuestionViewController: UIViewController {
         
         phrase.text = correctLettersArray.joined(separator: String(" "))
         score = score + 1
+        
+        print("Num Questions: \(numQuestions)")
         
         // numQuestions should be decremented when a prompt is completed.
         numQuestions -= 1

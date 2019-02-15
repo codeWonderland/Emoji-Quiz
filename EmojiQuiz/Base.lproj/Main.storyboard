@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="QuizViewController" customModule="EmojiQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Num Questions" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-6F-gIv">
-                                <rect key="frame" x="87.666666666666686" y="182" width="239" height="43"/>
+                                <rect key="frame" x="68" y="182" width="239" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,13 +32,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-bm-VdD">
-                                <rect key="frame" x="160" y="274" width="94" height="29"/>
+                                <rect key="frame" x="140.5" y="274" width="94" height="29"/>
                                 <connections>
                                     <action selector="setNumQuestions:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iUY-5b-CMo"/>
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-e6-Myy">
-                                <rect key="frame" x="183.66666666666666" y="432.66666666666669" width="47" height="30"/>
+                                <rect key="frame" x="164" y="398" width="47" height="30"/>
                                 <state key="normal" title="Disney"/>
                                 <connections>
                                     <action selector="clickTopic:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jOg-nb-3Pw"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dx6-06-zrg">
-                                <rect key="frame" x="185.66666666666666" y="485.66666666666669" width="43" height="30.000000000000057"/>
+                                <rect key="frame" x="166" y="451" width="43" height="30"/>
                                 <state key="normal" title="Books"/>
                                 <connections>
                                     <action selector="clickTopic:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YOZ-xb-2fF"/>
@@ -97,7 +97,7 @@
             <objects>
                 <navigationController id="FaG-oP-U5L" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MOJ-6x-eKb">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -113,30 +113,30 @@
             <objects>
                 <viewController id="la7-mE-J2v" customClass="QuestionViewController" customModule="EmojiQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rEz-eh-8W8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emojis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-9d-kra">
-                                <rect key="frame" x="182" y="158" width="50" height="21"/>
+                                <rect key="frame" x="162.5" y="158" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDM-hl-xRR">
-                                <rect key="frame" x="157" y="259" width="100.33333333333331" height="20.333333333333314"/>
+                                <rect key="frame" x="137.5" y="259" width="100" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQw-Er-gRP">
-                                <rect key="frame" x="75" y="345.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="75" y="345.5" width="30" height="30"/>
                                 <state key="normal" title="a"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="MHu-8l-1eJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjO-Lp-kx7">
-                                <rect key="frame" x="114" y="415.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="114" y="415.5" width="30" height="30"/>
                                 <state key="normal" title="o"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="Beu-gW-KTc"/>
@@ -150,112 +150,112 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lov-8G-Vvr">
-                                <rect key="frame" x="149" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="149" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="i"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="MFj-lp-Cbq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-y2-FbR">
-                                <rect key="frame" x="254" y="415.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="254" y="415.5" width="30" height="30"/>
                                 <state key="normal" title="s"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="Ldv-w4-b8f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvY-4s-TM1">
-                                <rect key="frame" x="110" y="450.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="110" y="450.5" width="30" height="30"/>
                                 <state key="normal" title="v"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="joO-Cw-AG9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAX-Bz-hyL">
-                                <rect key="frame" x="219" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="219" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="k"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="Q0m-VW-b2r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vJ-gC-pgU">
-                                <rect key="frame" x="184" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="184" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="j"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="r4g-Eo-a6x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ku-gK-shc">
-                                <rect key="frame" x="114" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="114" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="h"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="O6T-U8-AVV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbN-kx-Nag">
-                                <rect key="frame" x="79" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="79" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="g"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="NBd-kH-PkL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QR-oH-WRO">
-                                <rect key="frame" x="79" y="415.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="79" y="415.5" width="30" height="30"/>
                                 <state key="normal" title="n"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="AjQ-VO-zRw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-vN-JS6">
-                                <rect key="frame" x="145" y="345.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="145" y="345.5" width="30" height="30"/>
                                 <state key="normal" title="c"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="fcF-6b-nb5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNH-DY-4a9">
-                                <rect key="frame" x="215" y="345.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="215" y="345.5" width="30" height="30"/>
                                 <state key="normal" title="e"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="Pye-go-geu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF7-iT-j2J">
-                                <rect key="frame" x="180" y="345.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="180" y="345.5" width="30" height="30"/>
                                 <state key="normal" title="d"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="BA1-hc-eQx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-9C-civ">
-                                <rect key="frame" x="289" y="415.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="289" y="415.5" width="30" height="30"/>
                                 <state key="normal" title="t"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="aGn-tg-2h4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPI-eJ-JVU">
-                                <rect key="frame" x="180" y="450.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="180" y="450.5" width="30" height="30"/>
                                 <state key="normal" title="x"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="CC4-Fs-J8z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-ix-yRY">
-                                <rect key="frame" x="75" y="450.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="75" y="450.5" width="30" height="30"/>
                                 <state key="normal" title="u"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="8bG-ay-rBt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv4-3d-2Gt">
-                                <rect key="frame" x="250" y="450.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="250" y="450.5" width="30" height="30"/>
                                 <state key="normal" title="z"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="tRI-YY-Ui7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwc-Qh-P4v">
-                                <rect key="frame" x="254" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="254" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="l"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="loi-lf-GTg"/>
@@ -276,35 +276,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22K-Nv-VYn">
-                                <rect key="frame" x="184" y="415.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="184" y="415.5" width="30" height="30"/>
                                 <state key="normal" title="q"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="1IX-H9-zUA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-wo-vhE">
-                                <rect key="frame" x="145" y="453.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="145" y="453.5" width="30" height="30"/>
                                 <state key="normal" title="w"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="xS6-ve-Teu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-27-9fH">
-                                <rect key="frame" x="110" y="345.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="110" y="345.5" width="30" height="30"/>
                                 <state key="normal" title="b"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="yUF-gk-bzL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reO-Ls-LQC">
-                                <rect key="frame" x="149" y="418.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="149" y="418.5" width="30" height="30"/>
                                 <state key="normal" title="p"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="fZr-6Y-Hjj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAx-7M-2J1">
-                                <rect key="frame" x="289" y="380.33333333333331" width="30" height="30"/>
+                                <rect key="frame" x="289" y="380.5" width="30" height="30"/>
                                 <state key="normal" title="m"/>
                                 <connections>
                                     <action selector="guessLetter:" destination="la7-mE-J2v" eventType="touchUpInside" id="WNy-VF-iDU"/>
@@ -443,41 +443,41 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ScoreViewController" customModule="EmojiQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex - 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="182" y="135" width="50" height="17"/>
+                                <rect key="frame" x="162.5" y="135" width="50" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex - 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGi-pZ-55s">
-                                <rect key="frame" x="182" y="157" width="50" height="17"/>
+                                <rect key="frame" x="162.5" y="157" width="50" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex - 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APY-SQ-jLJ">
-                                <rect key="frame" x="182" y="179" width="50" height="17"/>
+                                <rect key="frame" x="162.5" y="179" width="50" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex - 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqM-sG-kAI">
-                                <rect key="frame" x="182" y="223" width="50" height="17"/>
+                                <rect key="frame" x="162.5" y="223" width="50" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex - 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWK-LV-QNW">
-                                <rect key="frame" x="182" y="201" width="50" height="17"/>
+                                <rect key="frame" x="162.5" y="201" width="50" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N43-T2-6H7">
-                                <rect key="frame" x="151.66666666666666" y="290" width="110.99999999999997" height="29"/>
+                                <rect key="frame" x="132" y="290" width="111" height="29"/>
                                 <segments>
                                     <segment title="Disney"/>
                                     <segment title="Books"/>
@@ -549,7 +549,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ujB-f7-sXs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yHo-xZ-EL4">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
