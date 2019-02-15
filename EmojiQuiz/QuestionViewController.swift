@@ -153,6 +153,8 @@ class QuestionViewController: UIViewController {
     
     func recordScore() {
         var uname = UserDefaults.standard.string(forKey: "uname") ?? ""
+        print("default uname:")
+        print(uname)
         
         // GET USERNAME
         if uname == "" {
@@ -174,6 +176,8 @@ class QuestionViewController: UIViewController {
                     self.navigationController?.popToRootViewController(animated: true)
                 }
             }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
         
         // TODO: RECORD SCORE
