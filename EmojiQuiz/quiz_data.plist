@@ -45,9 +45,48 @@
                 <string>robin hood</string>
             </array>
         </array>
-        <key>books</key>
+        <key>Books</key>
         <array>
-            <array></array>
+            <array>
+                <string>:japanese_ogre::writing_hand:️:woman:</string>
+                <string>frankenstein</string>
+            </array>
+            <array>
+                <string>:book: :weary:🧒</string>
+                <string>diary of a wimpy kid</string>
+            </array>
+            <array>
+                <string>:bird::skull:</string>
+                <string>to kill a mockingbird</string>
+            </array>
+            <array>
+                <string>:thunder_cloud_rain:️🦹‍♂️</string>
+                <string>the lightning thief</string>
+            </array>
+            <array>
+                <string>:lion_face::door::snowflake:️:girl::boy::person_with_blond_hair:‍♀️:person_with_blond_hair:</string>
+                <string>chronicles of narnia</string>
+            </array>
+            <array>
+                <string>:deciduous_tree::apple::boy:</string>
+                <string>the giving tree</string>
+            </array>
+            <array>
+                <string>:girl::rabbit::clock::milk::cake::cat: </string>
+                <string>alice in wonderland</string>
+            </array>
+            <array>
+                <string>:girl::pig::spider::spider_web:</string>
+                <string>charlottes web</string>
+            </array>
+            <array>
+                <string>:girl::skin-tone-2::flag_fr::gun::coffin:️</string>
+                <string>les miserables</string>
+            </array>
+            <array>
+                <string>:spy:️:man:‍⚕️</string>
+                <string>sherlock holmes</string>
+            </array>
         </array>
     </dict>
 </plist>
