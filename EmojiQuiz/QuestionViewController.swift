@@ -153,8 +153,6 @@ class QuestionViewController: UIViewController {
     
     func recordScore() {
         var uname = UserDefaults.standard.string(forKey: "uname") ?? ""
-        print("default uname:")
-        print(uname)
         
         // GET USERNAME
         if uname == "" {
@@ -166,7 +164,7 @@ class QuestionViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                 if let textField = alert?.textFields![0] {
-                    if textField.text == "" {
+                    if textField.text != "" {
                         UserDefaults.standard.set(textField.text!, forKey: "uname")
                         uname = textField.text!
                     } else {
