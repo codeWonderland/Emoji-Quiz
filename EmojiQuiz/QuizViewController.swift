@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class QuizViewController: UIViewController {
 
     @IBOutlet weak var questionCount: UILabel!
     @IBOutlet weak var questionStepper: UIStepper!

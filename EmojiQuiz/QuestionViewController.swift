@@ -168,10 +168,10 @@ class QuestionViewController: UIViewController {
                         UserDefaults.standard.set(textField.text!, forKey: "uname")
                         uname = textField.text!
                     } else {
-                        self.navigationController?.popToRootViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
                     }
                 } else {
-                    self.navigationController?.popToRootViewController(animated: true)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }))
             
@@ -181,7 +181,7 @@ class QuestionViewController: UIViewController {
         // TODO: RECORD SCORE
         
         // return to homescreen
-        self.navigationController?.popToRootViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     func endPrompt() {
