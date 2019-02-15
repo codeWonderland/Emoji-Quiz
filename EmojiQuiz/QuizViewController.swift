@@ -20,6 +20,8 @@ class QuizViewController: UIViewController {
         
         questionStepper.maximumValue = 10.0
         questionStepper.minimumValue = 1.0
+        
+        UserDefaults.standard.set(1, forKey: "numQuestions")
     }
 
     @IBAction func setNumQuestions(_ sender: UIStepper) {

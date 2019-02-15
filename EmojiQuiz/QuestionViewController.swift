@@ -146,33 +146,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    func recordScore() {
-        var uname = UserDefaults.standard.string(forKey: "uname") ?? ""
-        
-        // GET USERNAME
-        if uname == "" {
-            let alert = UIAlertController(title: "Record Username", message: "What should we put in the hall of fame?", preferredStyle: .alert)
-            
-            alert.addTextField(configurationHandler: { (textField: UITextField) in
-                textField.text = "Enter Username"
-            })
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-                if let textField = alert?.textFields![0] {
-                    if textField.text != "" {
-                        UserDefaults.standard.set(textField.text!, forKey: "uname")
-                        uname = textField.text!
-                    } else {
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                } else {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
-        }
-        
+    func _record(uname: String) {
         var scores = UserDefaults.standard.array(forKey: "\(topic!)_scores")
         
         if scores == nil {
@@ -189,10 +163,17 @@ class QuestionViewController: UIViewController {
             let l = left as! [Any]
             let r = right as! [Any]
             
-            let l1 = l[1] as! Int
-            let r1 = r[1] as! Int
+            var lscore = 0
+            var rscore = 0
             
-            if l1 > r1 {
+            if let l1 = Int("\(l[1])") {
+                lscore = l1
+            }
+            if let r1 = Int("\(r[1])") {
+                rscore = r1
+            }
+            
+            if lscore > rscore {
                 return true
             } else {
                 return false
@@ -208,12 +189,40 @@ class QuestionViewController: UIViewController {
                 return "Alex-1"
             }
         })
-    
+        
         // record scores
         UserDefaults.standard.set(scores, forKey: "\(topic!)_scores")
         
-        // return to homescreen
         dismiss(animated: true, completion: nil)
+    }
+    
+    func recordScore() {
+        var uname = UserDefaults.standard.string(forKey: "uname") ?? ""
+        
+        // GET USERNAME
+        if uname == "" {
+            let alert = UIAlertController(title: "Record Username", message: "What should we put in the hall of fame?", preferredStyle: .alert)
+            
+            alert.addTextField(configurationHandler: { (textField: UITextField) in
+                textField.text = "Enter Username"
+            })
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                if let textField = alert?.textFields![0] {
+                    if textField.text != "" {
+                        UserDefaults.standard.set(textField.text!, forKey: "uname")
+                        uname = textField.text!
+                        
+                        self._record(uname: uname)
+                    }
+                }
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            _record(uname: uname)
+        }
     }
     
     func endPrompt() {
