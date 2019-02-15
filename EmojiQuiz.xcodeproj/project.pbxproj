@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		991A87E82216039200EA8FDD /* RecordScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A87E72216039200EA8FDD /* RecordScoreViewController.swift */; };
 		997F9E34220A13DF00B0C318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F9E33220A13DF00B0C318 /* AppDelegate.swift */; };
 		997F9E36220A13DF00B0C318 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F9E35220A13DF00B0C318 /* QuizViewController.swift */; };
 		997F9E38220A13DF00B0C318 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F9E37220A13DF00B0C318 /* ScoreViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		991A87E72216039200EA8FDD /* RecordScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordScoreViewController.swift; sourceTree = "<group>"; };
 		997F9E30220A13DF00B0C318 /* EmojiQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997F9E33220A13DF00B0C318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997F9E35220A13DF00B0C318 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				997F9E3E220A13E000B0C318 /* LaunchScreen.storyboard */,
 				997F9E41220A13E000B0C318 /* Info.plist */,
 				99DA06F5220A701100A8B6BE /* QuestionViewController.swift */,
-				991A87E72216039200EA8FDD /* RecordScoreViewController.swift */,
 			);
 			path = EmojiQuiz;
 			sourceTree = "<group>";
@@ -150,7 +147,6 @@
 			files = (
 				997F9E38220A13DF00B0C318 /* ScoreViewController.swift in Sources */,
 				997F9E34220A13DF00B0C318 /* AppDelegate.swift in Sources */,
-				991A87E82216039200EA8FDD /* RecordScoreViewController.swift in Sources */,
 				99DA06F6220A701100A8B6BE /* QuestionViewController.swift in Sources */,
 				997F9E36220A13DF00B0C318 /* QuizViewController.swift in Sources */,
 			);

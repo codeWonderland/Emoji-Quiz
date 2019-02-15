@@ -513,6 +513,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="High Scores" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="scoreFive" destination="VqM-sG-kAI" id="CsL-BO-b5U"/>
+                        <outlet property="scoreFour" destination="mWK-LV-QNW" id="xuH-ok-bNV"/>
+                        <outlet property="scoreOne" destination="NDk-cv-Gan" id="mGq-J7-ajM"/>
+                        <outlet property="scoreThree" destination="APY-SQ-jLJ" id="wWX-j9-NtO"/>
+                        <outlet property="scoreTwo" destination="eGi-pZ-55s" id="dDa-83-fEt"/>
                         <outlet property="topicSelect" destination="N43-T2-6H7" id="PwE-Wl-wW7"/>
                     </connections>
                 </viewController>
