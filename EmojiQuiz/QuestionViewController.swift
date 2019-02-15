@@ -178,6 +178,8 @@ class QuestionViewController: UIViewController {
         
         // TODO: RECORD SCORE
         
+        // return to homescreen
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func endPrompt() {
@@ -189,7 +191,7 @@ class QuestionViewController: UIViewController {
         // numQuestions should be decremented when a prompt is completed.
         numQuestions -= 1
         if numQuestions <= 0 {
-            // TODO: game over! you won!
+            // game over! you won!
             recordScore()
             
         } else {
